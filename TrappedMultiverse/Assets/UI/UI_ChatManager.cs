@@ -112,7 +112,7 @@ public class UI_ChatManager : MonoBehaviour
         DocumentReference docRef = db.Collection("chat").Document();
         Dictionary<string, object> data = new Dictionary<string, object>
         {
-            { "author", "Los Angeles" },
+            { "author", FirebaseManager.instance.userName },
             { "creationDate", Timestamp.GetCurrentTimestamp() },
             { "message", msg }
         };
