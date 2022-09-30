@@ -68,6 +68,7 @@ public class Player : Entity
 
     private void Update()
     {
+        if (UIManager.instance.isInputFieldSelected) return;
         if (Input.GetKeyDown(KeyCode.Q))
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

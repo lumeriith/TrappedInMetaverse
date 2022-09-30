@@ -42,6 +42,8 @@ public class PlayerGunController : GunModeScript
     
     private void Update()
     {
+        if (UIManager.instance.isInputFieldSelected) return;
+
         if (Input.GetKeyDown(shootKey) && ammo <= 0)
         {
             emptyEffect.PlayNew();

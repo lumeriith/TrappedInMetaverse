@@ -49,6 +49,7 @@ public class ModeManager : ManagerBase<ModeManager>
     private void Update()
     {
         if (Player.instance.isDead) return;
+        if (UIManager.instance.isInputFieldSelected) return;
         if (Input.GetKeyDown(KeyCode.Alpha1)) SetGameMode(GameMode.Zoom);
         if (Input.GetKeyDown(KeyCode.Alpha2)) SetGameMode(GameMode.Gun);
         if (Input.GetKeyDown(KeyCode.Alpha3)) SetGameMode(GameMode.Mario);

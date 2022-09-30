@@ -25,6 +25,8 @@ public class FirstPersonMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (UIManager.instance.isInputFieldSelected) return;
+
         // Update IsRunning from input.
         IsRunning = canRun && Input.GetKey(runningKey);
 
