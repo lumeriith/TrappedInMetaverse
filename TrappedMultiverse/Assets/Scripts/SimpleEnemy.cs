@@ -73,7 +73,7 @@ public class SimpleEnemy : Entity
 
     private void OnDestroy()
     {
-        ModeManager.instance.onModeChanged -= OnModeChanged;
+        if (ModeManager.instance != null) ModeManager.instance.onModeChanged -= OnModeChanged;
     }
 
     private bool _isPlayerVisible = false;
