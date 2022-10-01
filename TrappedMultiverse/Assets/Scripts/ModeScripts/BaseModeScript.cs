@@ -14,7 +14,8 @@ public abstract class BaseModeScript : MonoBehaviour
     
     protected virtual void OnDestroy()
     {
-        ModeManager.instance.onModeChanged -= ReactModeChange;
+        if (ModeManager.instance != null)
+            ModeManager.instance.onModeChanged -= ReactModeChange;
     }
     
     private void ReactModeChange(GameMode newMode)
