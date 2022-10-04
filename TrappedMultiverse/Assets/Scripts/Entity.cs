@@ -29,7 +29,6 @@ public class Entity : MonoBehaviour
 
     public void Kill()
     {
-        if (ModeManager.instance.mode != GameMode.Mario) return;
         health = 0;
         onDeath?.Invoke();
     }
